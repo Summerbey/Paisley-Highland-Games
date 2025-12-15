@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:6.0
+    container_name: paisley_mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: paisley_admin_2025
+      MONGO_INITDB_DATABASE: paisley_highland_games
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - paisley_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: paisley_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - paisley_network
+
+volumes:
+  mongodb_data:
+  redis_data:
+
+networks:
+  paisley_network:
+    driver: bridge
