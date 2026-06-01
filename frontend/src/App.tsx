@@ -38,7 +38,7 @@ function App() {
         </main>
 
         <footer className="footer">
-          <p>&copy; 2025 Paisley Highland Games - Group M Project.</p>
+          <p>&copy; 2025 Paisley Highland Games - B00477047.</p>
         </footer>
       </div>
     </Router>

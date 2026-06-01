@@ -1,8 +1,6 @@
-# Paisley Highland Games - Group M Project
+# Paisley Highland Games - B00477047
 
-## Team Members
-- Bibika Ghimire - B00838239
-- Mateusz Nowak - B00350243 
+## Creator
 - Summer Rhoda - B00477047
 
 ## Project Overview
@@ -19,9 +17,6 @@ A full-stack web application for managing Highland Games events and competitor r
 - Vite build tool
 - React Router
 - Axios for API calls
-
-## Setup Instructions
-[Installation steps]
 
 ## Features
 - View all Highland Games events
