@@ -1,6 +1,24 @@
 version: '3.8'
 
 services:
+  app:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: paisley-highland-games
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=development
+      - MONGODB_URI=mongodb://admin:paisley_admin_2025@mongodb:27017/paisley_highland_games?authSource=admin
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - mongodb
+      - redis
+    networks:
+      - paisley_network
+    restart: unless-stopped
+
   mongodb:
     image: mongo:6.0
     container_name: paisley_mongodb
