@@ -16,7 +16,7 @@ const EventDetails = () => {
       
       try {
         const response = await eventAPI.getEvent(id);
-        setEvent(response.data);
+        setEvent(response);
         setLoading(false);
       } catch (err) {
         setError('Failed to fetch event details');

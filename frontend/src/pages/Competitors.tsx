@@ -11,7 +11,7 @@ const Competitors = () => {
     const fetchCompetitors = async () => {
       try {
         const response = await competitorAPI.getAllCompetitors();
-        setCompetitors(response.data);
+        setCompetitors(response);
         setLoading(false);
       } catch (err) {
         setError('Failed to fetch competitors');

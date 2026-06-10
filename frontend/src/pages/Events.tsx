@@ -12,7 +12,7 @@ const Events = () => {
     const fetchEvents = async () => {
       try {
         const response = await eventAPI.getAllEvents();
-        setEvents(response.data);
+        setEvents(response);
         setLoading(false);
       } catch (err) {
         setError('Failed to fetch events');
